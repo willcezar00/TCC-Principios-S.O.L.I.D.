@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2779F07-AD6D-4447-BDE5-A0B1E4A2EE34}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SOLID</RootNamespace>
+    <AssemblyName>SOLID</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Build.Utilities.v4.0" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1 - Single Responsibility Principle\Solucao\Models\Carrinho.cs" />
+    <Compile Include="1 - Single Responsibility Principle\Solucao\Models\Cliente.cs" />
+    <Compile Include="1 - Single Responsibility Principle\Solucao\Models\DetalhePagamento.cs" />
+    <Compile Include="1 - Single Responsibility Principle\Solucao\Models\Pedido.cs" />
+    <Compile Include="1 - Single Responsibility Principle\Solucao\Models\Produto.cs" />
+    <Compile Include="1 - Single Responsibility Principle\Solucao\Repositorios\EstoqueRepositorio.cs" />
+    <Compile Include="1 - Single Responsibility Principle\Solucao\Services\CartaoService.cs" />
+    <Compile Include="1 - Single Responsibility Principle\Solucao\Services\EstoqueService.cs" />
+    <Compile Include="1 - Single Responsibility Principle\Solucao\Services\NotificacaoService.cs" />
+    <Compile Include="1 - Single Responsibility Principle\Violação\Models\Carrinho.cs" />
+    <Compile Include="1 - Single Responsibility Principle\Violação\Models\DetalhePagamento.cs" />
+    <Compile Include="1 - Single Responsibility Principle\Violação\Models\Cliente.cs" />
+    <Compile Include="1 - Single Responsibility Principle\Violação\Models\Produto.cs" />
+    <Compile Include="1 - Single Responsibility Principle\Violação\Models\Pedido.cs" />
+    <Compile Include="1 - Single Responsibility Principle\Violação\Services\CartaoService.cs" />
+    <Compile Include="1 - Single Responsibility Principle\Violação\Services\EstoqueService.cs" />
+    <Compile Include="1 - Single Responsibility Principle\Violação\Utils\Logger.cs" />
+    <Compile Include="2 - Open Closed Principle\Solução\Interface\ICalculo.cs" />
+    <Compile Include="2 - Open Closed Principle\Solução\Models\Circulo.cs" />
+    <Compile Include="2 - Open Closed Principle\Solução\Models\Calculo.cs" />
+    <Compile Include="2 - Open Closed Principle\Solução\Models\Quadrado.cs" />
+    <Compile Include="2 - Open Closed Principle\Solução\Models\Triangulo.cs" />
+    <Compile Include="2 - Open Closed Principle\Violação\Models\Circulo.cs" />
+    <Compile Include="2 - Open Closed Principle\Violação\Models\Calculo.cs" />
+    <Compile Include="2 - Open Closed Principle\Violação\Models\FormaGeometrica.cs" />
+    <Compile Include="2 - Open Closed Principle\Violação\Models\Quadradro.cs" />
+    <Compile Include="3 - Liskov substitution principle\Solução Violando o OCP\Models\Calculo.cs" />
+    <Compile Include="3 - Liskov substitution principle\Solução\Models\Calculo.cs" />
+    <Compile Include="3 - Liskov substitution principle\Solução\Models\FormaGeometrica.cs" />
+    <Compile Include="3 - Liskov substitution principle\Solução\Models\Quadrado.cs" />
+    <Compile Include="3 - Liskov substitution principle\Solução\Models\Retangulo.cs" />
+    <Compile Include="3 - Liskov substitution principle\Solução Violando o OCP\Models\FormaGeometrica.cs" />
+    <Compile Include="3 - Liskov substitution principle\Solução Violando o OCP\Models\Quadrado.cs" />
+    <Compile Include="3 - Liskov substitution principle\Solução Violando o OCP\Models\Retangulo.cs" />
+    <Compile Include="3 - Liskov substitution principle\Violação\Models\Calculo.cs" />
+    <Compile Include="3 - Liskov substitution principle\Violação\Models\Quadrado.cs" />
+    <Compile Include="3 - Liskov substitution principle\Violação\Models\Retangulo.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Solucao\Interface\IPagamento.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Solucao\Interface\IPagamentoBoleto.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Solucao\Interface\IPagamentoCartao.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Solucao\Models\Carrinho.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Solucao\Models\Cliente.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Solucao\Models\DetalhePagamento.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Solucao\Models\Pedido.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Solucao\Models\Produto.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Solucao\Repositorios\EstoqueRepositorio.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Solucao\Services\BoletoService.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Solucao\Services\CartaoService.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Solucao\Services\EstoqueService.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Solucao\Services\NotificacaoService.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Violacao\Interface\IPagamento.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Violacao\Models\Carrinho.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Violacao\Models\Cliente.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Violacao\Models\DetalhePagamento.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Violacao\Models\Pedido.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Violacao\Models\Produto.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Violacao\Repositorios\EstoqueRepositorio.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Violacao\Services\BoletoService.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Violacao\Services\CartaoService.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Violacao\Services\EstoqueService.cs" />
+    <Compile Include="4 - Interface Segregation Principle\Violacao\Services\NotificacaoService.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Solução\Interface\IEstoqueRepositorio.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Solução\Interface\INotificacao.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Solução\Interface\IPagamento.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Solução\Interface\IVerificaEstoque.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Solução\Models\Carrinho.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Solução\Models\Cliente.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Solução\Models\Pedido.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Solução\Models\Produto.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Solução\Repositorios\EstoqueRepositorio.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Solução\Services\CartaoService.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Solução\Services\EstoqueService.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Solução\Services\NotificacaoService.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Violação\Models\Carrinho.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Violação\Models\Cliente.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Violação\Models\Pedido.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Violação\Models\Produto.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Violação\Repositorios\EstoqueRepositorio.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Violação\Services\CartaoService.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Violação\Services\EstoqueService.cs" />
+    <Compile Include="5 - Dependency Inversion Principle\Violação\Services\NotificacaoService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
